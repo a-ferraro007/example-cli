@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-
 const fs = require('fs').promises
+const readline = require('readline')
 
 class Formatter {
   constructor(private index: number) {
@@ -31,7 +31,7 @@ class Formatter {
   }
 }
 
-async function main() {
+export async function main() {
   const formatter = new Formatter(1)
 
   const promise1 = fs.readFile('src/test.json', 'utf8', formatter.readJSON)
@@ -43,8 +43,3 @@ async function main() {
   const resolved = await Promise.all([promise1, promise2, promise3, promise4, promise5])
   formatter.writeToFile(formatter.formatJSON(resolved))
 }
-
-;(async function cli(args: string[]) {
-  main()
-  console.log(args)
-})(process.argv.slice(2))
