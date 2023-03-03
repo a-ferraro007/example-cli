@@ -1,0 +1,26 @@
+{
+  "name": "json-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "bin": {
+    "json-formatter": "build/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "dev": "tsc && node build/index.js",
+    "dev --watch": "nodemon -c nodemon.json",
+    "reset": "rm -rf ./node_modules ./package-lock.json && npm install"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.14.4",
+    "nodemon": "^2.0.21",
+    "typescript": "^4.9.5"
+  }
+}
