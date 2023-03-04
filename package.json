@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Example CLI",
   "main": "build/index.js",
+  "type": "module",
   "bin": {
     "json-formatter": "build/cli.js"
   },
@@ -23,11 +24,17 @@
   },
   "license": "ISC",
   "devDependencies": {
+    "@types/cli-welcome": "^2.2.0",
+    "@types/inquirer": "^9.0.3",
     "@types/node": "^18.14.4",
     "nodemon": "^2.0.21",
     "typescript": "^4.9.5"
   },
   "dependencies": {
-    "esm": "^3.2.25"
+    "chalk": "^5.2.0",
+    "cli-welcome": "^2.2.2",
+    "esm": "^3.2.25",
+    "inquirer": "^9.1.4",
+    "inquirer-file-tree-selection-prompt": "^2.0.5"
   }
 }
