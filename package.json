@@ -8,8 +8,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "node build/index.js",
-    "dev": "tsc && node build/index.js",
+    "start": "node build/cli.js",
+    "dev": "tsc && node build/cli.js",
     "dev --watch": "nodemon -c nodemon.json",
     "reset": "rm -rf ./node_modules ./package-lock.json && npm install"
   },
